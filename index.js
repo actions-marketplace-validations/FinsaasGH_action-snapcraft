@@ -41,8 +41,6 @@ const runLinuxInstaller = () => {
 	run(`echo /snap/bin >> ${process.env.GITHUB_PATH}`); // Add `/snap/bin` to PATH for subsequent actions
 	run("sudo chown root:root /"); // Fix root ownership
 	if (useLxd) {
-		run("sudo /snap/bin/lxd.migrate -yes");
-		run("sudo /snap/bin/lxd waitready");
 		run("sudo /snap/bin/lxd init --auto");
 	}
 };
