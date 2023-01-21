@@ -1,4 +1,4 @@
-name: Snapcraft Action
+name: Snapcraft Build Action
 author: Samuel Meuli
 description: GitHub Action for setting up Snapcraft
 
