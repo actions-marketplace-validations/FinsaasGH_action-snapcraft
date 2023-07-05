@@ -9,7 +9,7 @@ inputs:
     default: stable
   snapcraft_token:
     description: Token for logging into Snapcraft
-    required: true
+    required: false
   skip_install:
     description: Skip installation (login only)
     required: false
