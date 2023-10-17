@@ -20,7 +20,7 @@ inputs:
     deprecationMessage: On ubuntu20.04 or later, it's enabled by default
 
 runs:
-  using: node18
+  using: node20
   main: ./index.js
 
 branding:
