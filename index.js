@@ -35,6 +35,8 @@ const runLinuxInstaller = () => {
 	const useLxd = process.env.INPUT_USE_LXD === "true";
 	run(`sudo snap install snapcraft --classic --channel ${process.env.INPUT_CHANNEL}`);
 	if (useLxd) {
+		run("sudo /snap/bin/lxd.migrate -yes");
+		run("sudo /snap/bin/lxd waitready");
 		run("sudo snap install lxd");
 		run(`sudo usermod --append --groups lxd ${process.env.USER}`);
 	}
