@@ -7,6 +7,9 @@ inputs:
     description: The channel to install Snapcraft from
     required: false
     default: stable
+  snapcraft_token:
+    description: Token for logging into Snapcraft
+    required: false
   skip_install:
     description: Skip installation (login only)
     required: false
@@ -17,7 +20,7 @@ inputs:
     deprecationMessage: On ubuntu20.04 or later, it's enabled by default
 
 runs:
-  using: node16
+  using: node18
   main: ./index.js
 
 branding:
